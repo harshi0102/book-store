@@ -2,7 +2,7 @@ import './App.css';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Routes, Route } from 'react-router-dom';
 import BooksContainer from './BooksContainer';
-import CategoriesContainer from './CategoriesPage';
+import CategoriesPage from './CategoriesPage';
 import Navigation from './Navigation';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<BooksContainer />} />
-        <Route path="categories" element={<CategoriesContainer />} />
+        <Route path="categories" element={<CategoriesPage />} />
       </Routes>
     </div>
 
