@@ -33,20 +33,16 @@ a {
 header {
   background-color: var(--primary);
   height: 62px;
-  color: var(--terciary);
+  color: black;
 }
 
 .logo {
   padding: 5px 0;
-  color: var(--terciary);
+  color: black;
 }
 
 .my-link {
   padding: 20px;
-  color: var(--terciary);
+  color: black;
   font-size: 1.5rem;
-}
-
-button {
-  margin-bottom: 10px;
 }

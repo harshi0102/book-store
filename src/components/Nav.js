@@ -2,7 +2,7 @@ import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Link } from 'react-router-dom';
 
-function Navigation() {
+function Nav() {
   return (
     <header>
       <div className="container flex">
@@ -24,4 +24,4 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+export default Nav;

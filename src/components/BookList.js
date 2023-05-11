@@ -1,22 +1,22 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
+import BookItem from './BookItem';
 
-function BookItem({ book }) {
+function BooksList({ books }) {
   return (
-    <li>
-      <h3>{book.category}</h3>
-      <h2>{book.name}</h2>
-      <h5>{book.author}</h5>
-      <div>
-        <button type="button">Remove</button>
-      </div>
-    </li>
+    <ul>
+      {books.map((book) => (
+        <BookItem
+          key={book.id}
+          book={book}
+        />
+      ))}
+    </ul>
   );
 }
 
-BookItem.propTypes = {
-  book: PropTypes.arrayOf.isRequired,
+BooksList.propTypes = {
+  books: PropTypes.arrayOf.isRequired,
 };
 
-export default BookItem;
+export default BooksList;

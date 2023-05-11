@@ -6,8 +6,8 @@ const books = [
   {
     id: 1,
     category: 'Action',
-    name: 'The hunger games',
-    author: 'Suzane Collins',
+    name: 'Angels and Demons',
+    author: 'J. R. R. Tolkien',
   },
   {
     id: 2,
