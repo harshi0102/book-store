@@ -3,9 +3,9 @@ import BookElement from './BookElement';
 export default function BooksItemList() {
   return (
     <ul style={{ listStyle: 'none' }}>
-      <li><BookElement title="Pride and Prejudice" author="Mark Twain" /></li>
-      <li><BookElement title="The Great Gatsby" author="F. Scott Fitzgerald" /></li>
-      <li><BookElement title="The Book Thief" author="Markus Zusak" /></li>
+      <li><BookElement booktitle="Pride and Prejudice" bookauthor="Mark Twain" /></li>
+      <li><BookElement booktitle="The Great Gatsby" bookauthor="F. Scott Fitzgerald" /></li>
+      <li><BookElement booktitle="The Book Thief" bookauthor="Markus Zusak" /></li>
 
     </ul>
   );
