@@ -35,6 +35,11 @@
 
   Bookstore is an app that allows you to view a list of books, add a new book and remove a book. Built using React and Redux (state management).
 
+  Phase-1: Initialize Project with Components Branch- 
+  I Created React app and added Redux and Added linters .I Created components and files for structuring the Application.I Implemented navigation for Books and Categories.I Added dummy data for the books and created reusable component
+  
+  Phase -2:Add Reducer-actions Branch-
+  I Created books actions, action creators, reducers, and storage in REDUX , added form validations and submission of new books and then implemented removing books in the react app.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
