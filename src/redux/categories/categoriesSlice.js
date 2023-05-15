@@ -5,7 +5,7 @@ const initialState = {
 };
 
 export const categoriesSlice = createSlice({
-  name: 'categories',
+  name: 'CategoriesPage',
   initialState,
   reducers: {
     checkStatus: () => 'Under Construction',
