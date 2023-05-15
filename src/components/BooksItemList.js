@@ -1,22 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import BookElement from './BookElement';
 
-function BooksItemList({ books }) {
+export default function BooksItemList() {
   return (
-    <ul>
-      {books.map((book) => (
-        <BookElement
-          key={book.id}
-          book={book}
-        />
-      ))}
+    <ul style={{ listStyle: 'none' }}>
+      <li><BookElement title="Pride and Prejudice" author="Mark Twain" /></li>
+      <li><BookElement title="The Great Gatsby" author="F. Scott Fitzgerald" /></li>
+      <li><BookElement title="The Book Thief" author="Markus Zusak" /></li>
+
     </ul>
   );
 }
-
-BooksItemList.propTypes = {
-  books: PropTypes.arrayOf(BookElement.propTypes.book).isRequired,
-};
-
-export default BooksItemList;

@@ -1,39 +1,12 @@
-import { React, useRef } from 'react';
-import { useDispatch } from 'react-redux';
-import { nanoid } from 'nanoid';
-import { addBook } from '../redux/books/booksSlice';
-
-function AddBookForm() {
-  const titleRef = useRef();
-  const authorRef = useRef();
-  const categoryRef = useRef();
-  const dispatch = useDispatch();
-
-  function submitBook(event) {
-    event.preventDefault();
-    const newBook = {
-      id: nanoid(),
-      title: titleRef.current.value,
-      author: authorRef.current.value,
-      category: categoryRef.current.value,
-    };
-    dispatch(addBook(newBook));
-    titleRef.current.value = '';
-    authorRef.current.value = '';
-    categoryRef.current.value = '';
-  }
-
+export default function AddBookForm() {
   return (
-    <div>
-      <h2>Add new book</h2>
-      <form onSubmit={submitBook}>
-        <input type="text" name="name" placeholder="Book Title" id="title" ref={titleRef} required />
-        <input type="text" name="author" placeholder="author" id="author" ref={authorRef} required />
-        <input type="text" name="category" placeholder="Category" id="category" ref={categoryRef} required />
+    <section>
+      <h2>ADD NEW BOOK</h2>
+      <form>
+        <input type="text" name="title" placeholder="Book title" />
+        <input type="text" name="author" placeholder="Author" />
         <button type="submit">Add Book</button>
       </form>
-    </div>
+    </section>
   );
 }
-
-export default AddBookForm;
