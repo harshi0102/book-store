@@ -1,7 +1,7 @@
 import { React, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from 'nanoid';
-import { addBook } from '../redux/books/books';
+import { addBook } from '../redux/books/booksSlice';
 
 function AddBookForm() {
   const titleRef = useRef();

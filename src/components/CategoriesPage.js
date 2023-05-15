@@ -4,7 +4,7 @@ function CategoriesPage() {
   return (
     <div className="book-container">
       <h2>Categories</h2>
-      <p>Coming soon </p>
+      <p> UnderConstruction</p>
     </div>
   );
 }
