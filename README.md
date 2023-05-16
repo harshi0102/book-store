@@ -41,6 +41,9 @@
   Phase -2:Add Reducer-actions Branch-
   I added the Redux Toolkit with the node package manager.I used a redux directory to hold all Redux logic and Implemented a global Redux store for the application state.I Defined a slice of state for the books and categories and Added reducers and actions for the various states.I used a Provider to pass the store to the app.I also used  feature folder approach to structure the application files.
 
+  Phase-3:Use Redux-in-Components Branch-
+  I Added the books slice to the booksList component and updated the initial state of the booksSlice
+  I also Added usedispatch for dispatching actions and implemented an event handler that adds a book to the books array and another that removes a book from the books array.I Wrapped the app with the Provider component from react-redux
 
 ## 🛠 Built With <a name="built-with"></a>
 
