@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function BookElement({ booktitle, bookauthor }) {
+export default function BookElement({ booktitle, bookauthor, deleteBook }) {
   return (
     <div className="container">
       <div>
@@ -14,7 +14,7 @@ export default function BookElement({ booktitle, bookauthor }) {
           {bookauthor}
           )
         </p>
-        <button type="button">Remove</button>
+        <button type="button" onClick={deleteBook}>Remove</button>
       </div>
     </div>
   );
@@ -23,4 +23,5 @@ export default function BookElement({ booktitle, bookauthor }) {
 BookElement.propTypes = {
   booktitle: PropTypes.string.isRequired,
   bookauthor: PropTypes.string.isRequired,
+  deleteBook: PropTypes.func.isRequired,
 };

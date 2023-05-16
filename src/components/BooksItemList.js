@@ -1,12 +1,22 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { deleteBook } from '../redux/books/booksSlice';
 import BookElement from './BookElement';
 
 export default function BooksItemList() {
+  const books = useSelector((state) => state.books.value);
+  const dispatch = useDispatch();
+
   return (
     <ul style={{ listStyle: 'none' }}>
-      <li><BookElement booktitle="Pride and Prejudice" bookauthor="Mark Twain" /></li>
-      <li><BookElement booktitle="The Great Gatsby" bookauthor="F. Scott Fitzgerald" /></li>
-      <li><BookElement booktitle="The Book Thief" bookauthor="Markus Zusak" /></li>
-
+      {books.map((book) => (
+        <li key={book.item_id}>
+          <BookElement
+            booktitle={book.title}
+            bookauthor={book.author}
+            deleteBook={() => dispatch(deleteBook(book.item_id))}
+          />
+        </li>
+      ))}
     </ul>
   );
 }
