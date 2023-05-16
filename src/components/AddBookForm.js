@@ -36,7 +36,7 @@ export default function AddNewBook() {
           value={infos.author || ''}
           type="text"
           name="author"
-          placeholder="author"
+          placeholder="Author"
           onChange={handleChange}
         />
 
