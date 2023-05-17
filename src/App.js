@@ -1,19 +1,25 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+/* eslint-disable import/no-named-as-default */
+/* eslint-disable import/no-named-as-default-member */
+import { useSelector } from 'react-redux';
+import React from 'react';
+import './index.css';
+import { Route, Routes } from 'react-router-dom';
 import BooksCollection from './components/BooksCollection';
-import CategoriesPage from './components/CategoriesPage';
 import Header from './components/Header';
-import './App.css';
+import CategoriesPage from './components/CategoriesPage';
 
 function App() {
+  const state = useSelector((state) => state);
   return (
-    <BrowserRouter>
+    <>
       <Header />
-      <Routes>
-        <Route path="/" element={<BooksCollection />} />
-        <Route path="/categories" element={<CategoriesPage />} />
-      </Routes>
-    </BrowserRouter>
+      <div>
+        <Routes>
+          <Route path="/" exact element={<BooksCollection />} />
+          <Route path="/categories" element={<CategoriesPage categories={state.categories} />} />
+        </Routes>
+      </div>
+    </>
   );
 }
-
 export default App;

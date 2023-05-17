@@ -45,6 +45,10 @@
   I Added the books slice to the booksList component and updated the initial state of the booksSlice
   I also Added usedispatch for dispatching actions and implemented an event handler that adds a book to the books array and another that removes a book from the books array.I Wrapped the app with the Provider component from react-redux
 
+  Phase-4:Connect-to-API Branch
+  I made use of the Bookstore API at backend. I used axios with createAsyncThunk to make my HTTP request to the backend. I fetched books from the Bookstore API after the component has rendered.
+  I refractor my add book and remove book features to persist my changes in the server.
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
