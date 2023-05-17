@@ -1,10 +1,9 @@
-// import React from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteBook } from '../redux/books/booksSlice';
 
-/* eslint-disable react/prop-types */
-function BookElement(props) {
-  const { title, author, id } = props;
+function BookElement({ title, author, id }) {
   const dispatch = useDispatch();
 
   const handleDelete = (e) => {
@@ -17,10 +16,24 @@ function BookElement(props) {
       <div className="bookinfo">
         <h2 className="book-title">{title}</h2>
         <p className="book-author">{author}</p>
-        <a href="./" id={id} className="deletebtn" onClick={handleDelete}>Remove</a>
+        {id && (
+          <a href="/" id={id} className="deletebtn" onClick={handleDelete}>
+            Remove
+          </a>
+        )}
       </div>
     </li>
   );
 }
+
+BookElement.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  id: PropTypes.string,
+};
+
+BookElement.defaultProps = {
+  id: null,
+};
 
 export default BookElement;

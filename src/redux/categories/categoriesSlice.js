@@ -1,4 +1,4 @@
-const CATEGORY_STATUS = 'bookstore/books/CATEGORY_STATUS';
+const CATEGORY_STATUS = 'bookstore/categories/CATEGORY_STATUS';
 
 const initialState = [];
 
@@ -14,4 +14,5 @@ const categoriesReducer = (state = initialState, action) => {
       return state;
   }
 };
+
 export default categoriesReducer;
