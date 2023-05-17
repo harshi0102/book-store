@@ -1,47 +1,42 @@
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { insertBook } from '../redux/books/booksSlice';
 
-export default function AddNewBook() {
-  const [infos, setinfos] = useState({});
+const AddBookForm = () => {
   const dispatch = useDispatch();
+  const [book, setBook] = useState({
+    title: '', author: '', item_id: '', category: 'fiction',
+  });
 
-  function handleChange(e) {
-    const { name } = e.target;
-    const { value } = e.target;
-    setinfos((infos) => ({
-      ...infos, item_id: crypto.randomUUID(), [name]: value,
-    }));
-  }
-
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(insertBook(infos));
-    setinfos({});
-  }
+    if (book.title && book.author) {
+      dispatch(insertBook(book));
+      setBook({
+        title: '', author: '', item_id: '', category: 'fiction',
+      });
+    }
+  };
+
+  const handleRead = (e) => {
+    setBook({
+      ...book,
+      item_id: uuidv4(),
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return (
-    <section>
-      <h2>ADD NEW BOOK</h2>
-      <form>
-        <input
-          value={infos.title || ''}
-          type="text"
-          name="title"
-          placeholder="Book title"
-          onChange={handleChange}
-        />
-
-        <input
-          value={infos.author || ''}
-          type="text"
-          name="author"
-          placeholder="Author"
-          onChange={handleChange}
-        />
-
-        <button type="submit" onClick={handleSubmit}>Add Book</button>
+    <div className="form">
+      <h1>ADD A NEW BOOK</h1>
+      <form className="inputs">
+        <input type="text" name="title" placeholder="Book-title" value={book.title} onChange={handleRead} />
+        <input type="text" name="author" placeholder="Book-author" value={book.author} onChange={handleRead} />
+        <button type="submit" onClick={handleSubmit}>Add</button>
       </form>
-    </section>
+    </div>
   );
-}
+};
+
+export default AddBookForm;
