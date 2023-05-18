@@ -1,6 +1,294 @@
-/*
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;900&display=swap');
 
-body{
-  margin:30px;
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+form,
+label,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
 
-  */
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+nav {
+  margin-top: -35px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.875rem;
+}
+
+.navbar li {
+  list-style: none;
+  margin: 0.3rem 2.5rem;
+  color: #0290ff;
+}
+
+.navbarlink {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.813rem;
+  color: #888;
+}
+
+.navbarlink:hover {
+  text-decoration: underline;
+}
+
+.bookList {
+  list-style: none;
+}
+
+.addcontainer {
+  margin: 6.25rem;
+}
+
+.ListBook {
+  color: gray;
+  font-weight: bolder;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  padding: 0.5rem 7rem 0.5rem 0;
+  margin-right: 0.1rem;
+  border-radius: 2px;
+  border: 2px solid silver;
+}
+
+.author {
+  padding-top: 0.5rem;
+  padding-right: 7rem;
+  padding-bottom: 0.5rem;
+  margin-right: 0.1rem;
+  border-radius: 2px;
+  border: 2px solid silver;
+}
+
+.input-submit {
+  padding: 0.2rem 1rem;
+  color: #fff;
+  background-color: rgb(29, 124, 231);
+  border: none;
+  border-radius: 5px;
+}
+
+.status {
+  width: 100px;
+  padding: 0.8rem;
+  margin-left: 50%;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e8e8e8;
+  margin: 6.25rem;
+  background-color: #fff;
+  padding: 2rem;
+  flex: 1;
+}
+
+.category {
+  font-size: 0.875rem;
+  color: #888;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  margin-left:280px;
+}
+
+.bookTitle {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 900;
+  font-size: 1.375rem;
+  letter-spacing: -0.2px;
+}
+
+.bookAuthor {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  color: #4386bf;
+  font-weight: 300;
+}
+
+.bookElement {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  color: #4386bf;
+  font-weight: 300;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.clear {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  color: #4386bf;
+  font-weight: 300;
+  margin-right: 0.3rem;
+  margin-left: 0.2rem;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.element {
+  margin-top: 0.5rem;
+}
+
+.rightBorder {
+  border-right: 2px solid #e8e8e8;
+  padding: 2px 0 2px 0;
+}
+
+.distribution {
+  border-right: 2px solid #e8e8e8;
+  padding: 2px 0 2px 0;
+}
+
+.edit {
+  margin-left: 0.5rem;
+}
+
+.progress {
+  display: flex;
+}
+
+.progReport {
+  padding-top: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.propPercent {
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.rate {
+  font-size: 0.875rem;
+  color: #888;
+}
+
+.chapter h2 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  color: #888;
+}
+
+.chapter h3 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+
+.progButton {
+  padding: 0.5rem 2rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  color: #fff;
+  background-color: rgb(29, 124, 231);
+  border: none;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 660px) {
+  .card {
+    display: block;
+    padding-right: 1rem;
+  }
+
+  .actions {
+    margin-bottom: 1rem;
+  }
+
+  .progress {
+    margin-bottom: 1rem;
+  }
+
+  .form {
+    display: block;
+    width: 300px;
+  }
+
+  .title {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+
+  .author {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .input-submit {
+    padding: 1rem 2rem;
+  }
+
+  .distribution {
+    display: none;
+  }
+
+  .user {
+    display: none;
+  }
+}
+
+.user {
+  position: relative;
+  top: 66px;
+  float: right;
+  margin-right: 106px;
+  font-size: 25px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: #0290ff;
+  color: white;
+}
+
+.title::placeholder {
+  padding-left: 10px;
+}
+
+.author::placeholder {
+  padding-left: 10px;
+}
