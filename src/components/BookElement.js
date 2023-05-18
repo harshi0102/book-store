@@ -77,7 +77,7 @@ function BookElement() {
                   {/* eslint-disable-next-line */}
                   <CircularProgressBar {...props} />
                   <span className="progReport">
-                    <p className="propPercent">{`${props.percent}%`}</p>
+                    <p className="percent">{`${props.percent}%`}</p>
                     <p className="rate">completed</p>
                   </span>
                 </span>
