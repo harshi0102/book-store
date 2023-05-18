@@ -2,7 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router, Routes, Route, Link,
 } from 'react-router-dom';
-import { AiOutlineUser } from 'react-icons/ai';
+import { FaUserAlt } from 'react-icons/fa';
 import BooksCollection from './components/BooksCollection';
 import CategoriesPage from './components/CategoriesPage';
 import './App.css';
@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <div className="user">
-        <AiOutlineUser classname="profile" />
+        <FaUserAlt classname="profile" />
       </div>
       <div className="appContainer">
         <nav>
@@ -34,6 +34,7 @@ function App() {
         <Route path="/" element={<BooksCollection />} />
         <Route path="/categories" element={<CategoriesPage />} />
       </Routes>
+
     </Router>
   );
 }
