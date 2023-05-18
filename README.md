@@ -52,10 +52,6 @@
   Phase 5- Add Styling Branch
 I added styling to the react -bookstore project just similar to the design provided below:
 The details of the Bookstore design in Zeplin.I styled according to the design.
-Website View
-<img src="ScreenShot_1.png" alt="image" width="500" height="500">
-
-Click here for [live-demo]()
 
 ## 🛠 Built With <a name="built-with"></a>
 
