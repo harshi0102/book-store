@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaUserAlt } from 'react-icons/fa';
 
 function Header() {
   return (
@@ -14,6 +15,10 @@ function Header() {
             <Link to="/Categories">Categories</Link>
           </li>
         </ul>
+        <div className="profile">
+          <FaUserAlt />
+
+        </div>
 
       </nav>
     </header>

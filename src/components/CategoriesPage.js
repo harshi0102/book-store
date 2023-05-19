@@ -1,23 +1,24 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { categoryStatus } from '../redux/categories/categoriesSlice';
+import { useSelector, useDispatch } from 'react-redux';
+import { checkStatus } from '../redux/categories/categoriesSlice';
 
-// eslint-disable-next-line react/prop-types
-function CategoriesPage({ categories }) {
+function CategoriesPage() {
+  const categoryStatus = useSelector((state) => state.categories);
   const dispatch = useDispatch();
-
-  const handleStatus = () => {
-    dispatch(categoryStatus());
-  };
   return (
-    <div className="checkstatus">
-      <button type="button" onClick={() => handleStatus()}>Check status</button>
-      <br />
-      { categories }
+    <div className="category">
+      <div>{categoryStatus}</div>
+      <button
+        className="status"
+        type="submit"
+        onClick={() => {
+          dispatch(checkStatus());
+        }}
+      >
+        Check Status
+      </button>
     </div>
   );
 }
-CategoriesPage.defaultProps = {
-  categories: [],
-};
+
 export default CategoriesPage;
