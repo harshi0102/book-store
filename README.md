@@ -53,6 +53,10 @@
 I added styling to the react -bookstore project just similar to the design provided below:
 The details of the Bookstore design in Zeplin.I styled according to the design.
 
+Desktop View:
+![image](https://github.com/harshi0102/book-store/assets/108334376/99314030-d733-476b-b4dc-b18d8969e320)
+
+
 Check out for [Live Demo](https://bookstore-react-rycz.onrender.com)
 
 ## 🛠 Built With <a name="built-with"></a>
