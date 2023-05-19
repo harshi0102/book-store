@@ -53,6 +53,8 @@
 I added styling to the react -bookstore project just similar to the design provided below:
 The details of the Bookstore design in Zeplin.I styled according to the design.
 
+Check out for [Live Demo](https://bookstore-react-rycz.onrender.com)
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -92,7 +94,7 @@ The details of the Bookstore design in Zeplin.I styled according to the design.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Not available for now
+- [Live Demo](https://bookstore-react-rycz.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -156,7 +158,7 @@ npx stylelint "**/*.{css,scss}"
 
 ### Deployment
 
- Not available for now
+ [Click here for live demo](https://bookstore-react-rycz.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
