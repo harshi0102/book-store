@@ -30,7 +30,7 @@ const AddbookForm = () => {
       <span className="ListBook">ADD NEW BOOK</span>
       <form className="form">
         <input
-          className="title"
+          className="title booktitle"
           type="text"
           name="title"
           value={bookliststate.title}
@@ -47,7 +47,7 @@ const AddbookForm = () => {
         />
         <select
           name="category"
-          className="author"
+          className="categorytitle input-category"
           onChange={handleEvent}
         >
           <option value="">Category</option>
@@ -56,7 +56,7 @@ const AddbookForm = () => {
           <option value="Religious">Religious</option>
           <option value="Romance">Romance</option>
         </select>
-        <button type="button" className="input-submit" onClick={handleSubmit}>
+        <button type="submit" className="submit" onClick={handleSubmit}>
           Add book
         </button>
       </form>

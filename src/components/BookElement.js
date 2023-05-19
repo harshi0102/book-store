@@ -9,9 +9,9 @@ import { getBooks, deleteBook } from '../redux/books/booksSlice';
 const props = {
   id: 0,
   percent: Math.floor(Math.random() * 100 + 1), // is required
-  colorSlice: '#00a1ff',
-  colorCircle: '#00a1ff',
-  fontColor: '#365b74',
+  colorSlice: '#379cf6',
+  colorCircle: '#379cf6',
+  fontColor: '#379cf6',
   fontSize: '1.6rem',
   fontWeight: 400,
   size: 100,
@@ -27,7 +27,7 @@ const props = {
   inverse: false,
   round: false,
   number: false,
-  linearGradient: ['#00a1ff', '#00a1ff'],
+  linearGradient: ['#379cf6', '#379cf6'],
 };
 
 function BookElement() {
@@ -45,7 +45,7 @@ function BookElement() {
     percent: checkPropTypes.random,
   };
   return (
-    <li className="bookList">
+    <div className="bookList">
       <div className="bookContainer">
         <div>
           {bookShow.map((book) => (
@@ -94,7 +94,7 @@ function BookElement() {
           ))}
         </div>
       </div>
-    </li>
+    </div>
   );
 }
 

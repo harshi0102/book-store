@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;900&display=swap');
 
 html,
-body,
 div,
 span,
 h1,
@@ -37,21 +36,49 @@ section {
   font-family: 'Montserrat', sans-serif;
 }
 
+body {
+  background-color: #fafafa;
+  padding: 4%;
+}
+
+.bookContainer {
+  margin-top: 30px;
+}
+
+hr {
+  width: 93rem;
+  height: 0.125rem;
+  margin: 2.5rem 0.063rem 1.813rem 0;
+  border: solid 1px #e8e8e8;
+}
+
+.backgroundcream {
+  background-color: #fafafa;
+}
+
 .navbar {
   display: flex;
-  align-items: flex-end;
-  padding: 1rem;
-  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
-  width: 100%;
+  align-items: center;
+  grid-gap: 40px;
+  gap: 40px;
 }
 
 nav {
-  margin-top: -43px;
+  width: 97.5%;
+  height: 5.938rem;
+  padding: 24px 4%;
+  background-color: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  grid-gap: 40px;
+  gap: 40px;
 }
 
-.logo {
+.navbar .logo {
   font-weight: bold;
   font-size: 1.875rem;
+  margin-left: -35px;
 }
 
 .navbar li {
@@ -73,15 +100,33 @@ nav {
 
 .bookList {
   list-style: none;
+
+  /* width: 87.5rem;
+  height: 68.563rem; */
+  margin: 0 2.5rem 4.063rem 0;
+
+  /* padding: 0 0 49.625rem; */
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fafafa;
 }
 
 .addcontainer {
-  margin: 6.25rem;
+  margin-top: -10px;
 }
 
 .ListBook {
-  color: gray;
-  font-weight: bolder;
+  width: 10.875rem;
+  height: 1.5rem;
+  margin: 7px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
 }
 
 .form {
@@ -90,27 +135,65 @@ nav {
 }
 
 .title {
-  padding: 0.5rem 7rem 0.5rem 0;
-  margin-right: 0.1rem;
-  border-radius: 2px;
-  border: 2px solid silver;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  margin-top: 10px;
+  margin-left: 0;
 }
 
-.author {
-  padding-top: 0.5rem;
-  padding-right: 7rem;
-  padding-bottom: 0.5rem;
-  margin-right: 0.1rem;
-  border-radius: 2px;
-  border: 2px solid silver;
+.booktitle {
+  margin-right: 69px;
+  padding: 22px;
+  width: 37.5rem;
+  height: 2.813rem;
 }
 
-.input-submit {
-  padding: 0.2rem 1rem;
-  color: #fff;
-  background-color: rgb(29, 124, 231);
+.categorytitle {
+  width: 30%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
+
+.input-category {
+  width: 24.813rem;
+  height: 2.813rem;
+  margin-left: -116px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.submit {
+  cursor: pointer;
+  width: 11.5rem;
+  height: 2.813rem;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: #0290ff;
   border: none;
-  border-radius: 5px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-size: 0.813rem;
+  font-weight: 700;
+  font-family: "Roboto Slab", serif;
+  position: relative;
+  left: -44px;
+  text-transform: uppercase;
 }
 
 .status {
@@ -122,19 +205,27 @@ nav {
 .card {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #e8e8e8;
-  margin: 6.25rem;
+
+  /* border: 1px solid #ffffff;
+  margin-top:20px;
+  margin-left:10px;
   background-color: #fff;
-  padding: 2rem;
+  padding: 2rem; */
   flex: 1;
+  height: 9.625rem;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  margin-top: 10px;
 }
 
 .category {
   font-size: 0.875rem;
-  color: #888;
+  color: #121212;
   font-family: 'Montserrat', sans-serif;
   display: flex;
-  margin-left: 280px;
+  opacity: 0.5;
 }
 
 .bookTitle {
@@ -179,6 +270,17 @@ nav {
 .rightBorder {
   border-right: 2px solid #e8e8e8;
   padding: 2px 0 2px 0;
+}
+
+.author {
+  margin-left: -131px;
+  width: 15%;
+  height: 45px;
+  border: 1px solid #e8e8e8;
+  margin-top: 10px;
+  margin-right: 55px;
+  padding: 15px;
+  color: #c4c4c4;
 }
 
 .distribution {
@@ -226,9 +328,10 @@ nav {
   padding-bottom: 0.5rem;
   margin-top: 1rem;
   color: #fff;
-  background-color: rgb(29, 124, 231);
+  background-color: #0290ff;
   border: none;
   border-radius: 5px;
+  font-family: "RobotoSlab", sans-serif;
 }
 
 @media only screen and (max-width: 660px) {
@@ -275,7 +378,8 @@ nav {
 
 .user {
   position: relative;
-  top: 66px;
+  top: 80px;
+  left: 64px;
   float: right;
   margin-right: 106px;
   font-size: 20px;
@@ -284,12 +388,4 @@ nav {
   background-color: white;
   color: #0290ff;
   padding: 10px;
-}
-
-.title::placeholder {
-  padding-left: 10px;
-}
-
-.author::placeholder {
-  padding-left: 10px;
 }

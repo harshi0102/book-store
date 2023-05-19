@@ -3,8 +3,9 @@ import AddBookForm from './AddBookForm';
 
 function BooksCollection() {
   return (
-    <div>
+    <div className="backgroundcream">
       <BookElement />
+      <hr />
       <AddBookForm />
     </div>
   );

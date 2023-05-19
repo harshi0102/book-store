@@ -10,6 +10,7 @@ import './App.css';
 function App() {
   return (
     <Router>
+
       <div className="user">
         <FaUserAlt classname="profile" />
       </div>
@@ -34,7 +35,6 @@ function App() {
         <Route path="/" element={<BooksCollection />} />
         <Route path="/categories" element={<CategoriesPage />} />
       </Routes>
-
     </Router>
   );
 }
